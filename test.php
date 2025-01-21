@@ -1,3 +1,9 @@
+<?php
+$array = [11, 17, 6, 1, 2, 4, 3, 5, 6, 7, 8, 10, 21, 14, 15, 17, 18, 19, 2];
+/**
+ * @param array $array
+ * @return string
+ */
 function search(array $array): string
 {
     // Инициализация временного массива для хранения диапазонов
@@ -33,6 +39,7 @@ function search(array $array): string
         } else {
             // Если последовательность прерывается
             if (!empty($tempArray)) {
+                $resultArray[] = "{$tempArray[0]} – {$tempArray[count($tempArray) - 1]}";;
                 // Формируем строку диапазона и добавляем её в итоговый массив
                 $resultArray[] = "{$tempArray[0]} – {$tempArray[count($tempArray) - 1]}";
             }
@@ -53,3 +60,5 @@ function search(array $array): string
     // Возвращаем итоговый массив в виде строки, разделенной запятыми
     return implode(',', $resultArray);
 }
+echo search($array);
+?>
