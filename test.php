@@ -1,6 +1,10 @@
 <?php
 $array = [11, 17, 6, 1, 2, 4, 3, 5, 6, 7, 8, 10, 21, 14, 15, 17, 18, 19, 2];
 
+/**
+ * @param array $array
+ * @return string
+ */
 function search(array $array): string
 {
     $tempArray = [];
